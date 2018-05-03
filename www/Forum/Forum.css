@@ -1,0 +1,426 @@
+Body {
+    margin: 0;
+    font-family: Verdana, Calibri, sans-serif;
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+    background-blend-mode: soft-light, screen;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    background-color: transparent;
+    color: #12acf0;
+    text-decoration: none;
+}
+
+a:active {
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*
+-----------------------------------------------------------------
+                            MENU
+-----------------------------------------------------------------
+*/
+
+nav > ul {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 25%;
+}
+
+/* mettre les elements lien à coter de l'autre */
+
+nav > ul > li {
+    float: left;
+}
+
+/*cacher les sous-onglets*/
+
+.submenu {
+    display: none;
+}
+
+
+nav {
+    background-color: #940202;
+}
+
+/*On affiche seulemnt les sous-onglet qui correspond */
+
+nav > ul > li {
+    float: left;
+    position: relative;
+}
+
+/*si probleme d'affichage mettre ce commentaire en code */
+
+nav > ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    display: inline-block;
+}
+
+nav > ul > li > a {
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+/* affichage de sous-onglet au passage de la sourie*/
+
+nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+}
+
+/*rendu des contour des sous-onglets*/
+
+.submenu li {
+    border-bottom: 1px solid #CCC;
+}
+
+/*mise en forme des liens*/
+
+.submenu li a {
+    padding: 10px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px
+}
+
+/*Ajout d'une couleur au survole de l'onglet*/
+
+.menu-Accueil:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Produit:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Notre-Aventure:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Contactez-nous:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Espace-Client:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+/*Ne plus faire que les onglets bouge au passage de la sourie*/
+
+nav > ul > li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+/*habillage des sous-onglets*/
+
+.menu-Produit .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Notre-Aventure .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Contactez-nous .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Espace-Client .submenu {
+    background-color: #F53E3E;
+}
+
+
+.submenu li:hover a {
+    color: #EEE;
+    font-weight: bold;
+}
+
+
+/*
+-----------------------------------------------------------------
+                            MENU RESPONSIVE
+-----------------------------------------------------------------
+*/
+
+/*rendre la checkbox invisible*/
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+/*On cache le bouton menu mobile*/
+
+.menu-mobile {
+    display: none;
+}
+
+/*quand l'utilisateur clique sur menu le menu arrive*/
+
+nav input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+/*modification du menu */
+
+@media screen and (max-width: 680px) {
+    .menu-mobile {
+        display: block;
+        color: #fff;
+        background-color: rgba(29, 197, 151, 0.97);
+        text-align: center;
+        padding: 12px 0;
+    }
+    nav ul {
+        display: none;
+    }
+
+
+    nav ul li,
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li,
+    nav ul li a {
+        padding: 10px 0px 10px 0px;
+    }
+
+    nav li:hover .submenu {
+        display: block;
+        position: static;
+    }
+
+}
+
+/*
+-----------------------------------------------------------------
+                          LOGO
+-----------------------------------------------------------------
+*/
+
+.logo{
+    float: left;
+    margin-left: 100px;
+}
+
+
+/*sstyles généraux*/
+body, div, h1, form, fieldset, input, textarea{
+    border: 0;
+}
+
+/* le formulaire*/
+#contact{
+    text-align: center;
+    height: 450px;
+    width: 430px;
+    float: center;
+    margin: 30px auto;
+    padding: 30px 30px;
+    background: #c9d0de;
+    border: 1px solid #e1e1e1;
+    -moz-box-shadow: 0px 0px 8px #444;
+    -webkit-box-shadow: 0px 0px 8px #444;
+}
+
+h1 {
+    font-size: 25px;
+    color: #445668;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 35px 0;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+/* Les étiquettes*/
+label {
+    float: left;
+    clear: left;
+    margin: 11px 20px 0 0;
+    width: 75px;
+    text-align: right;
+    font-size: 16px;
+    color: #445668;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+
+/* Les champs de saisie*/
+input{
+    width: 260px;
+    height: 35px;
+    padding: 5px 20px 0px 20px;
+    margin: 0 0 20px 0;
+    background: #5E768D;
+    background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #546A7F), color-stop(20%, #5E768D));
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0px 1px 0px #f2f2f2;
+    -webkit-box-shadow: 0px 1px 0px #f2f2f2;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 0px #334f71;
+}
+
+input : -webkit-input-placeholder {
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+input : -moz-placeholder{
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+/* champs multilignes*/
+textarea{
+    width: 260px;
+    height: 130px;
+    padding: 12px 20px 0px 20px;
+    background: #5E768D;
+    background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #546A7F), color-stop(20%, #5E768D));
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0px 1px0px #f2f2f2;
+    -webkit-box-shadow: 0px 1px 0px #f2f2f2;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 0px #334f71;
+}
+
+textarea::-webkit-input-placeholder{
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+textarea{
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+/* Focus sur le champs*/
+input: focus, textarea:focus{
+    background: #728eaa;
+    background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #668099), color-stop(20%, #728eaa));
+}
+
+/*Bouton d'envoi*/
+input[type=submit]{
+    width: 150px;
+    height: 42px;
+    float: right;
+    padding: 10px 15px;
+    margin: 0 15px 0 0;
+    -moz-box-shadow: 0px 0px 5px #999;
+    border: 1px solid #556f8c;
+    background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #718DA9), color-stop(100%, #415D79));
+    cursor: pointer;
+}
+
+
+/* Mise en forme du tableaux*/
+table{
+    max-width: 1200px;
+    border-spacing: 0;
+    margin: 20px 0 0 33%;
+}
+.bordered{
+    border: solid #ccc 1px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 3px 3px #ccc;
+    -moz-box-shadow: 0 3px 3px #ccc;
+    box-shadow: 0 3px 3px #ccc;
+}
+
+/* Cellules du tableau*/
+
+.bordered td, .bordered th{
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cellules d'en-tête*/
+.bordered th {
+    background-color: #dce9f9;
+    background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+    box-shadow: 0 1px 0 rgba(255,255,255,.8);
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+/* L'arrondi des cellules*/
+.bordered td:first-child, .bordered th:first-child{
+    border-left: none;
+}
+.bordered th:first-child{
+    border-radius: 20px 0 0 0;
+}
+.bordered tr:last-child{
+    border-radius: 0 20px 0 0;
+}
+.bordered tr:last-child td:first-child{
+    border-radius: 0 0 0 20px;
+}
+.bordered tr:last-child td:last-child{
+    border-radius: 0 0 20px 0;
+}
+
+/* survol des lignes*/
+.bordered tr:hover{
+    background: #fbf8e9;
+}
+
+/*
+-----------------------------------------------------------------
+                            FOOTER
+-----------------------------------------------------------------
+*/
+
+
+footer h3 {
+    font-family: 'BioRhyme Expanded', serif;
+    text-align: center;
+}
+
+footer div {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    background-color: #940202;
+}

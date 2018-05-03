@@ -1,0 +1,498 @@
+Body {
+    margin: 0;
+    font-family: Verdana, Calibri, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    background-color: transparent;
+    color: #12acf0;
+    text-decoration: none;
+}
+
+a:active {
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*
+-----------------------------------------------------------------
+                            MENU
+-----------------------------------------------------------------
+*/
+
+nav > ul {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 25%;
+}
+
+/* mettre les elements lien à coter de l'autre */
+
+nav > ul > li {
+    float: left;
+}
+
+/*cacher les sous-onglets*/
+
+.submenu {
+    display: none;
+}
+
+
+nav {
+    background-color: #940202;
+}
+
+/*On affiche seulemnt les sous-onglet qui correspond */
+
+nav > ul > li {
+    float: left;
+    position: relative;
+}
+
+/*si probleme d'affichage mettre ce commentaire en code */
+
+nav > ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    display: inline-block;
+}
+
+nav > ul > li > a {
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+/* affichage de sous-onglet au passage de la sourie*/
+
+nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+}
+
+/*rendu des contour des sous-onglets*/
+
+.submenu li {
+    border-bottom: 1px solid #CCC;
+}
+
+/*mise en forme des liens*/
+
+.submenu li a {
+    padding: 10px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px
+}
+
+/*Ajout d'une couleur au survole de l'onglet*/
+
+.menu-Accueil:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Produit:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Notre-Aventure:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Contactez-nous:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+.menu-Espace-Client:hover {
+    border-top: 5px solid #FAF7F7;
+}
+
+/*Ne plus faire que les onglets bouge au passage de la sourie*/
+
+nav > ul > li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+/*habillage des sous-onglets*/
+
+.menu-Produit .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Notre-Aventure .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Contactez-nous .submenu {
+    background-color: #F53E3E;
+}
+
+.menu-Espace-Client .submenu {
+    background-color: #F53E3E;
+}
+
+
+.submenu li:hover a {
+    color: #EEE;
+    font-weight: bold;
+}
+
+
+/*
+-----------------------------------------------------------------
+                            MENU RESPONSIVE
+-----------------------------------------------------------------
+*/
+
+/*rendre la checkbox invisible*/
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+/*On cache le bouton menu mobile*/
+
+.menu-mobile {
+    display: none;
+}
+
+/*quand l'utilisateur clique sur menu le menu arrive*/
+
+nav input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+/*modification du menu */
+
+@media screen and (max-width: 680px) {
+    .menu-mobile {
+        display: block;
+        color: #fff;
+        background-color: rgba(29, 197, 151, 0.97);
+        text-align: center;
+        padding: 12px 0;
+    }
+    nav ul {
+        display: none;
+    }
+
+
+    nav ul li,
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li,
+    nav ul li a {
+        padding: 10px 0px 10px 0px;
+    }
+
+    nav li:hover .submenu {
+        display: block;
+        position: static;
+    }
+
+}
+
+
+/*
+-----------------------------------------------------------------
+                            MENU RESPONSIVE
+-----------------------------------------------------------------
+*/
+
+/*rendre la checkbox invisible*/
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+/*On cache le bouton menu mobile*/
+
+.menu-mobile {
+    display: none;
+}
+
+/*quand l'utilisateur clique sur menu le menu arrive*/
+
+nav input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+/*modification du menu */
+
+@media screen and (max-width: 680px) {
+    .menu-mobile {
+        display: block;
+        color: #fff;
+        background-color: rgba(29, 197, 151, 0.97);
+        text-align: center;
+        padding: 12px 0;
+    }
+    nav ul {
+        display: none;
+    }
+
+
+    nav ul li,
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li,
+    nav ul li a {
+        padding: 10px 0px 10px 0px;
+    }
+
+    nav li:hover .submenu {
+        display: block;
+        position: static;
+    }
+
+}
+
+
+/*
+---------------------------------------------------------------------
+                    Formulaire de connection
+---------------------------------------------------------------------
+*/
+
+/* formulaire de créer un compte */
+
+#inscription {
+    text-align: center;
+    margin: 0 auto;
+    height: 1500px;
+    width: 500px;
+    padding: 30px;
+    outline: 0;
+    top: 30%;
+    box-shadow: none;
+    border: 0 none;
+
+}
+
+#inscription #add_user{
+    height: 30px;
+    width: 30px;
+}
+
+.alert{
+  background-color: red;
+  padding: 25px;
+  text-align: center;
+}
+
+#inscription #submit{
+    /* Mise ne forme de la boite */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+    float: right;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+    /* coins arrondis*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+
+}
+#inscription #Submit::-moz-focus-inner{
+    border: none;
+}
+/* autres liens*/
+#inscription #actions a {
+    color: #3151A2;
+    float: right;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+/* Formulaire de Se connecter*/
+
+#login{
+    text-align: center;
+    margin: 0 auto;
+    height: 240px;
+    width: 400px;
+    padding: 30px;
+    outline: none;
+    top:30%;
+}
+#login p a {
+    padding-top:25px;
+    color:black;
+}
+/*titre du formulaire*/
+h1 {
+    text-shadow: 0 1px 0 rgba(255,255,255,.7), 0px 2px 0 rgba(0,0,0,.5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+}
+/*filets décoratifs*/
+/*
+h1:after, h1:before {
+    background-color: #777;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    width: 120px;
+}
+*/
+/* champs de saisie*/
+fieldset{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#input input {
+    background: #f1f1f1 url(http://www.red-team-design.com/wp-content/uploads/2011/09/login-sprite.png) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin:  0 0 10px 0;
+    width: 353px;
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#inputs input:focus{
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+/* bouton de connexion*/
+#actions{
+    margin: 25px 0 0 0;
+}
+
+#Se_connecter{
+    margin-top: 30px;
+    /* Mise en forme de la boite */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+    float: right;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+
+    /* coins arrondis*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+/*utilisation du bouton*/
+#Se_connecter:hover, #Se_connecter:focus{
+    background-color: #fddb6f;
+    background-image: -webkit-gradient(linear, left top, left bottom,from(#ffb94b),to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+}
+#Se_connecter:active{
+    outline: none;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.5) inset;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5) inset;
+}
+#Se_connecter::-moz-focus-inner{
+    border: none;
+}
+/* autres liens*/
+#actions a {
+    color: #3151A2;
+    float: left;
+    line-height: 35px;
+    margin-left: 10px;
+}
+#login #connexion{
+    height: 30px;
+    width: 30px;
+}
+/*footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* pied de page Titre*/
+footer h3 {
+    font-family: 'BioRhyme Expanded', serif;
+    text-align: center;
+}
+
+/* image du pied de page*/
+footer div {
+    text-align: center;
+    padding: 10px;
+}
+
+footer div #insta {
+    height: 34px;
+    width: 34px;
+}
+
+/*
+-----------------------------------------------------------------
+                            FOOTER
+-----------------------------------------------------------------
+*/
+
+footer{
+    background-color: #940202;
+}
+footer h3 {
+    font-family: 'BioRhyme Expanded', serif;
+    text-align: center;
+}
+
+footer div {
+    text-align: center;
+    padding: 10px;
+}
